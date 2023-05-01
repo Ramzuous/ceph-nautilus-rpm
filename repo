@@ -1,0 +1,41 @@
+# CentOS virtualization packages
+#
+[marcant-ceph]
+name=CentOS-$releasever - MarcanT Ceph
+baseurl=http://updates.marcant.net/pub/install/ks/RPMS/CentOS/$releasever/ceph/
+Priority=1
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-MarcanT-technik
+
+[centos-qemu]
+name=CentOS-$releasever - QEMU
+baseurl=http://updates.marcant.net/pub/mirror/CentOS/$releasever/virt/$basearch/kvm-common/
+Priority=2
+gpgcheck=1
+enabled=1
+gpgkey=https://www.centos.org/keys/RPM-GPG-KEY-CentOS-SIG-Virtualization
+
+[centos-libvirt]
+name=CentOS-$releasever - libvirt
+baseurl=http://updates.marcant.net/pub/mirror/CentOS/$releasever/virt/$basearch/libvirt-latest/
+Priority=2
+gpgcheck=1
+enabled=1
+gpgkey=https://www.centos.org/keys/RPM-GPG-KEY-CentOS-SIG-Virtualization
+
+[ceph-nautilus]
+name=Ceph Nautilus
+baseurl=http://updates.marcant.net/pub/mirror/CentOS/$releasever/ceph-nautilus/$basearch/
+Priority=2
+gpgcheck=1
+enabled=1
+gpgkey=https://download.ceph.com/keys/release.asc
+
+[ceph-nautilus-noarch]
+name=Ceph Nautilus noarch
+baseurl=http://updates.marcant.net/pub/mirror/CentOS/$releasever/ceph-nautilus/noarch/
+Priority=2
+gpgcheck=1
+enabled=1
+gpgkey=https://download.ceph.com/keys/release.asc
+exclude=ceph-release

@@ -1,0 +1,6 @@
+---
+- name: Wait for {{ host }} port {{ port }} with delay {{ delay }}
+  wait_for:
+    host: "{{ host }}"
+    port: "{{ port }}"
+    delay: "{{ delay }}"

@@ -1,0 +1,8 @@
+---
+- name: Blockinfile {{ block }} for {{ path }} state {{ path }} mark {{ mark_name }}
+  blockinfile:
+     create: yes
+     path: "{{ path }}"
+     block: "{{ block }}"
+     marker: "# {mark} {{ mark_name }}"
+     state: "{{ state }}"

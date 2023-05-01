@@ -1,0 +1,5 @@
+---
+- name: Set {{ path }} state {{ state }}
+  file:
+    path: "{{ path }}"
+    state: "{{ state }}"
